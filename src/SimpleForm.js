@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import { API, graphqlOperation } from 'aws-amplify';
-import { createEntry } from './graphql/mutations';
+import { generateClient } from 'aws-amplify/api'; // Ensure this path is correct
+import { createEntry } from './graphql/mutations'; // Ensure this path is correct
+
+const client = generateClient(); // Create your client instance
 
 const SimpleForm = () => {
   const [input, setInput] = useState('');
@@ -9,7 +11,11 @@ const SimpleForm = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await API.graphql(graphqlOperation(createEntry, { input: { name: input } }));
+      // Ensure that client.graphql supports the given API call format
+      await client.graphql({
+        query: createEntry, // The mutation query
+        variables: { input: { name: input } } // The input variables
+      });
       setMessage('Entry created successfully!');
     } catch (error) {
       setMessage('Error creating entry.');
