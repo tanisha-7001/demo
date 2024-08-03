@@ -1,6 +1,6 @@
 # schema.graphql
 
-type Entry @model {
+type Entry @model @auth(rules: [{ allow: public }]) {
   id: ID!
   name: String!
 }
