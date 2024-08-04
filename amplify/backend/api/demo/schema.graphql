@@ -1,6 +1,8 @@
-# schema.graphql
 
-type Entry @model @auth(rules: [{ allow: public }]) {
-  id: ID!
-  name: String!
+type Student @model @auth(rules: [{ allow: public }]) {
+  id: ID! # Unique identifier for the student
+  rollNumber: String! # Roll number of the student
+  name: String! # Name of the student
+  marks: Int! # Marks of the student
+  course: String! # Course of the student
 }

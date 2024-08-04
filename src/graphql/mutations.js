@@ -1,42 +1,51 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const createEntry = /* GraphQL */ `
-  mutation CreateEntry(
-    $input: CreateEntryInput!
-    $condition: ModelEntryConditionInput
+export const createStudent = /* GraphQL */ `
+  mutation CreateStudent(
+    $input: CreateStudentInput!
+    $condition: ModelStudentConditionInput
   ) {
-    createEntry(input: $input, condition: $condition) {
+    createStudent(input: $input, condition: $condition) {
       id
+      rollNumber
       name
+      marks
+      course
       createdAt
       updatedAt
       __typename
     }
   }
 `;
-export const updateEntry = /* GraphQL */ `
-  mutation UpdateEntry(
-    $input: UpdateEntryInput!
-    $condition: ModelEntryConditionInput
+export const updateStudent = /* GraphQL */ `
+  mutation UpdateStudent(
+    $input: UpdateStudentInput!
+    $condition: ModelStudentConditionInput
   ) {
-    updateEntry(input: $input, condition: $condition) {
+    updateStudent(input: $input, condition: $condition) {
       id
+      rollNumber
       name
+      marks
+      course
       createdAt
       updatedAt
       __typename
     }
   }
 `;
-export const deleteEntry = /* GraphQL */ `
-  mutation DeleteEntry(
-    $input: DeleteEntryInput!
-    $condition: ModelEntryConditionInput
+export const deleteStudent = /* GraphQL */ `
+  mutation DeleteStudent(
+    $input: DeleteStudentInput!
+    $condition: ModelStudentConditionInput
   ) {
-    deleteEntry(input: $input, condition: $condition) {
+    deleteStudent(input: $input, condition: $condition) {
       id
+      rollNumber
       name
+      marks
+      course
       createdAt
       updatedAt
       __typename

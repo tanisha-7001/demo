@@ -1,27 +1,33 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const getEntry = /* GraphQL */ `
-  query GetEntry($id: ID!) {
-    getEntry(id: $id) {
+export const getStudent = /* GraphQL */ `
+  query GetStudent($id: ID!) {
+    getStudent(id: $id) {
       id
+      rollNumber
       name
+      marks
+      course
       createdAt
       updatedAt
       __typename
     }
   }
 `;
-export const listEntries = /* GraphQL */ `
-  query ListEntries(
-    $filter: ModelEntryFilterInput
+export const listStudents = /* GraphQL */ `
+  query ListStudents(
+    $filter: ModelStudentFilterInput
     $limit: Int
     $nextToken: String
   ) {
-    listEntries(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    listStudents(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
+        rollNumber
         name
+        marks
+        course
         createdAt
         updatedAt
         __typename
